@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
+    background-color: #f0f0f0;
+}
+
+.prod-detail {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prod-detail img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.prod-detail div {
+    text-align: left;
+}
+
+.prod-detail h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.prod-detail p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.cat {
+    font-style: italic;
+    color: #555;
+    font-size: 1em;
+}
+
+.precio {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.5em;
+}

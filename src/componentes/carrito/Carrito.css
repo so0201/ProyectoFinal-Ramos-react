@@ -1,0 +1,24 @@
+.Car {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.main-title {
+    color: #333;
+}
+
+.Car > div {
+    margin-bottom: 20px;
+}
+.botonCar {
+    background-color: #541ee9;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.botonCar:hover {
+    background-color: #946dff;
+}

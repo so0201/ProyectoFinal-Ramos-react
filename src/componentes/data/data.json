@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "name": "Bugatti",
+      "price": 25000.00,
+      "category": "Alta",
+      "desc": "Un auto de clase alta",
+      "image": "https://resizer.glanacion.com/resizer/v2/los-cinco-autos-mas-caros-del-mundo-y-un-bonus-de-W7PDP6QM2NDP3IHNPRMLL6P2CI.jpg?auth=ff38663a9ff982cccf8bca1d4ea97d72e82c53bb2367c842fb1d7a1acff31b15&width=880&height=586&quality=70&smart=true",
+      "stock": 3
+    },
+    {
+      "id": 2,
+      "name": "Jaguar",
+      "price": 15000.00,
+      "category": "Baja",
+      "desc": "Un auto de clase baja, pero de talla mundial",
+      "image": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/OJ3CFLJB5JDJDFNTX3NBWFCDD4.jpg",
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": "Alfa Romeo",
+      "price": 20500.00,
+      "category": "Media",
+      "desc": "Un auto Clase media pero, que no te deja a pata.",
+      "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_12aa5deef3794cc4ad0dfcd88426ef17.jpg",
+      "stock": 7
+    }
+]
