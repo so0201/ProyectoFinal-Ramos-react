@@ -1,10 +1,13 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
+import { Link } from 'react-router-dom';
+import { database } from '../firebase/config';
 import './Carrito.css';
+
 
 const Carrito = () => {
 
-    const { carrito, vaciarCarrito} = useContext(CartContext);
+    const { carrito, precioTotal, vaciarCarrito} = useContext(CartContext);
 
     const vaciar = () => {
         vaciarCarrito();
@@ -29,7 +32,9 @@ const Carrito = () => {
         {
             carrito.length > 0 ?
             <>
+            <h2>Precio total: ${precioTotal(    )}</h2>
                 <button className='botonCar' onClick={vaciar}>Vaciar</button>
+                <Link to="/checkout">Finalizar Compra</Link>
             </> :
             <h2>El carrito esta vacio :(</h2>
         }

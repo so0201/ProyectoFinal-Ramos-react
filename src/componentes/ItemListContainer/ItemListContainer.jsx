@@ -1,25 +1,30 @@
 import { useEffect, useState } from "react";
-import { pedirDatos } from "./pedirDatos";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where} from "firebase/firestore";
+import { database } from "../firebase/config";
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
+    const [name, setName] = useState("Productos");
     const category = useParams().category;
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        pedirDatos()
-            .then((res) => {
-                const filteredProductos = category ? res.filter((producto) => producto.category.toLowerCase() === category.toLowerCase()) : res;
-    
-                setProductos(filteredProductos);
-                setLoading(false);
-    
-                if (category && filteredProductos.length === 0) {
-                    console.log(`No hay productos para la categoría "${category}".`);
-                }
+        
+        const productosREF = collection(database, "productos");
+
+        const q = category ? query(productosREF, where("category", "==", category)) : productosREF;
+
+        getDocs(q)
+            .then((resp) => {
+
+                setProductos(
+                    resp.docs.map((doc) => {
+                        return { ...doc.data(), id: doc.id }
+                    })
+                )
             })
+
     }, [category]);
     return (
         <>
